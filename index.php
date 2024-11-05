@@ -46,9 +46,12 @@
 
 			while($data = mysqli_fetch_array($res))
 			{
-				$imagePath = 'images_articles/' . strtolower(str_replace(' ', '-', $data['libelle'])) . '.jpg';
-				echo '<img src="' . $imagePath . '" alt="' . htmlspecialchars($data['libelle']) . '">';
 				?>
+
+				
+				 <img src="<?php echo 'images_articles/'.htmlspecialchars($data['image']); ?>" alt="Image de  <?php echo htmlspecialchars($data['libelle']); ?>">
+				
+
 
 				<?php
 					echo $data['libelle'].' ';
