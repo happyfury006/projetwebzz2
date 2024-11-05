@@ -1,31 +1,41 @@
 body{
 	margin:0;
 	padding:0;
-	
+	background-image: url("../img/fond-wide-1200px.gif");
+}
+@font-face{
+	font-family: 'titre';
+	src: url('../font/zorque.otf');
+	font-weight: normal;
 }
 .titre{
 	width:70%;
-	height:50px;
-	/* background-color:white; */
-	background-image: url("../img/fond-wide-1200px.gif");
+	height:auto;
+	font-family: 'titre';
+	font-size: 60px;
+	display: flex;
+	justify-items: center;
+	justify-content: center;
+	align-items: center;
+	
 	float:left;
+	
 }
 .authentification{
 	width:30%;
 	height: 50px;
-	background-color:#4494cb;
+	
 	float:left;
 }
 .contenu{
 	width:70%;
 	height:500px;
-	background-color:#c0d4e7;
 	float:left;
 }
 .panier{
 	width:30%;
 	height: 500px;
-	background-image:linear-gradient(#FFFFFF, #d8d8d8);
+	
 	float:left;
 }
 @media screen and (max-width: 900px){

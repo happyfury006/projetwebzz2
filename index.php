@@ -14,10 +14,13 @@
     </head>
     <body>
 		<div class="titre">
-			TITRE
-			</div>
+			<img src="img/icone-site.gif"></img> 
+			<!-- Jeux Vidéos -->
+			<p>Jeux Vidéos</p> 
+		</div>
 			<div class="authentification">
 			AUTHENTIFICATION
+			
 			</div>
 			<div class="contenu">
 			CONTENU
