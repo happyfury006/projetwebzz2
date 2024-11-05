@@ -19,7 +19,18 @@
 			<p>Jeux Vidéos</p> 
 		</div>
 			<div class="authentification">
-			AUTHENTIFICATION
+			<!-- AUTHENTIFICATION -->
+			<div class="connexion">
+				<label for="adresse_mail">adresse mail</label>
+				<input type="mail" name="mail">
+				<label for="mot_de_passe">mot de passe</label>
+				<input type="password" name="mail">
+			</div>
+			<div class="buttons">
+				<button>S'inscrire</button>
+				<button>Connexion</button>
+			</div>
+			
 			
 			</div>
 			<div class="contenu">

@@ -2,14 +2,20 @@ body{
 	margin:0;
 	padding:0;
 	background-image: url("../img/fond-wide-1200px.gif");
+	background-size: 100%;
 }
 @font-face{
 	font-family: 'titre';
 	src: url('../font/zorque.otf');
 	font-weight: normal;
 }
+@font-face{
+	font-family: 'button';
+	src: url('../font/tytoon_mist.ttf');
+	font-weight: bold;
+}
 .titre{
-	width:70%;
+	width:80%;
 	height:auto;
 	font-family: 'titre';
 	font-size: 60px;
@@ -17,23 +23,45 @@ body{
 	justify-items: center;
 	justify-content: center;
 	align-items: center;
-	
+	color: #092435;
 	float:left;
 	
 }
 .authentification{
-	width:30%;
-	height: 50px;
+	width:20%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
 	
-	float:left;
+	
+}
+.connexion{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: flex-end;
+	background-color:#4494cb;
+	margin: 10px;
+	padding: 10px;
+}
+.buttons{
+	width: 90%;
+	display: flex;
+	justify-content: flex-end;
+	padding-right: 20px;
+	justify-content: space-between;
+}
+button{
+	font-family: 'button';
+	font-size: 30px;
 }
 .contenu{
-	width:70%;
+	width:80%;
 	height:500px;
 	float:left;
 }
 .panier{
-	width:30%;
+	width:20%;
 	height: 500px;
 	
 	float:left;
