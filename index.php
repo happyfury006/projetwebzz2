@@ -34,40 +34,30 @@
 			
 			</div>
 			<div class="contenu">
-			<?php
-			 
-			
-			$db = mysqli_connect('localhost', 'jeux-videos', 'IsImA_ZZ2/%', 'jeux-videos', 3307)
-			or die('Erreur SQL'.mysqli_error($db));
-			$db -> query ('SET NAMES UTF8');
-			$cate = $_GET['famille'];
-			$sql = "SELECT libelle, detail, prix_ttc FROM article WHERE id_categorie=$cate";
-			$res = $db -> query($sql);
+    <?php
+    $db = mysqli_connect('localhost', 'jeux-videos', 'IsImA_ZZ2/%', 'jeux-videos', 3307)
+    or die('Erreur SQL'.mysqli_error($db));
+    $db->query('SET NAMES UTF8');
+    $cate = $_GET['famille'];
+    $sql = "SELECT libelle, detail, prix_ttc, image FROM article WHERE id_categorie=$cate";
+    $res = $db->query($sql);
 
-			while($data = mysqli_fetch_array($res))
-			{
-				?>
-
-				
-				 <img src="<?php echo 'images_articles/'.htmlspecialchars($data['image']); ?>" alt="Image de  <?php echo htmlspecialchars($data['libelle']); ?>">
-				
-
-
-				<?php
-					echo $data['libelle'].' ';
-					echo $data['detail'].' ';				
-					echo $data['prix_ttc'];				
-					echo ' - ';
-				?>
-				
-			<?php
-			}
-			?>
-			
-			<?php
-				mysqli_close($db);
-			?>
-			</div>
+    while ($data = mysqli_fetch_array($res)) {
+    ?>
+        <div class="game-card">
+            <img src="<?php echo 'images_articles/' . htmlspecialchars($data['image']); ?>" alt="Image de <?php echo htmlspecialchars($data['libelle']); ?>" class="game-image">
+            <div class="game-info">
+                <h3 class="game-title"><?php echo $data['libelle']; ?></h3>
+                <p class="game-description"><?php echo $data['detail']; ?></p>
+                <p class="game-price"><?php echo $data['prix_ttc']; ?> €</p>
+                <button class="game-button">Commander</button>
+            </div>
+        </div>
+    <?php
+    }
+    mysqli_close($db);
+    ?>
+</div>
 			<div class="panier">
 			PANIER
 		</div>
