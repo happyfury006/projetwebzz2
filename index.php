@@ -39,7 +39,7 @@
 			<div class="contenu">
     <?php
     $db = mysqli_connect('localhost', 'jeux-videos', 'IsImA_ZZ2/%', 'jeux-videos', 3307)
-    or die('Erreur SQL'.mysqli_error($db));
+	or die('Erreur SQL'.mysqli_error($db));
     $db->query('SET NAMES UTF8');
 	$sql2 = "SELECT image, libelle FROM categorie";
 	$res2 = $db -> query($sql2);
