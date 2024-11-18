@@ -1,8 +1,13 @@
-body {
-    margin: 0;
-    padding: 0;
-    background-image: url("../img/fond-wide-1200px.gif");
-    background-size: 100%;
+* {
+	box-sizing: border-box;
+}
+
+
+body{
+	margin:0;
+	padding:0;
+	background-image: url("../img/fond-wide-1200px.gif");
+	background-size: 100%;
 }
 
 @font-face {
@@ -160,6 +165,52 @@ color:#fff;
 	align-items: flex-start;
 	border-bottom: 3px solid #d8d8d8;
 }
+
+
+.categorie {
+	display: flex;
+	width: 350%;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	margin-top: 80px;
+	margin-left: 50px;
+	margin-right: 50px;
+}
+
+.unecate {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 30%;
+}
+
+.imgcate {
+	display: flex;
+	height: 150px;
+	width: 150px;
+	background-color: #4494cb;
+	border-radius: 50%;
+	border: 2px solid black;
+	max-width: 100%;
+}
+
+.nomcate {
+	display: flex;
+	font-weight: bold;
+	text-transform: uppercase;
+	justify-content: center;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+		
+		
+.panier{
+	width:20%;
+	height: 500px;
+	
+	float:right;
 .panier-icon {
     width: 40px; /* Adjust the size of the icon */
     height: auto;
