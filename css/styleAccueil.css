@@ -1,132 +1,181 @@
-body{
-	margin:0;
-	padding:0;
-	background-image: url("../img/fond-wide-1200px.gif");
-	background-size: 100%;
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("../img/fond-wide-1200px.gif");
+    background-size: 100%;
 }
-@font-face{
-	font-family: 'titre';
-	src: url('../font/zorque.otf');
-	font-weight: normal;
+
+@font-face {
+    font-family: 'titre';
+    src: url('../font/zorque.otf');
+    font-weight: normal;
 }
-@font-face{
-	font-family: 'button';
-	src: url('../font/tytoon_mist.ttf');
-	font-weight: bold;
+
+@font-face {
+    font-family: 'button';
+    src: url('../font/tytoon_mist.ttf');
+    font-weight: bold;
 }
-.titre{
-	width:80%;
-	height:auto;
-	font-family: 'titre';
-	font-size: 60px;
+
+.titre {
+    width: 80%;
+    height: auto;
+    font-family: 'titre';
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #092435;
+    float: left;
+}
+
+.authentification {
+    width: 20%;
 	display: flex;
-	justify-items: center;
+	float: left;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.connexion {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    background-color: #4494cb;
+    margin: 10px;
+    padding: 10px;
+}
+
+.buttons {
+    width: 90%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+    justify-content: space-between;
+}
+
+.boutton
+{
+	font-family: 'button';
+	background-color:#fff;
+	height:30px;
+	border : none;
+	border-bottom:2px solid #092435;
+	padding:3px 10px 3px 10px;
+	margin:3px 10px 3px 10px;
+	font-weight:normal;
+	font-size:24px;
+	color:#092435;
+}
+
+.bouton:hover
+{
+background-color:#092435;
+border-bottom:2px solid #fff;
+color:#fff;
+}
+.liste{
+	width: 80%;
 	justify-content: center;
-	align-items: center;
-	color: #092435;
-	float:left;
-	
-}
-.authentification{
-	width:20%;
 	display: flex;
-	flex-direction: column;
-	justify-content: flex-end;
-	
-	
-}
-.connexion{
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-end;
-	align-items: flex-end;
-	background-color:#4494cb;
-	margin: 10px;
-	padding: 10px;
-}
-.buttons{
-	width: 90%;
-	display: flex;
-	justify-content: flex-end;
-	padding-right: 20px;
-	justify-content: space-between;
-}
-button{
-	font-family: 'button';
-	font-size: 30px;
+	float: left;
 }
 .contenu {
-	width: 80%;
-	height: auto;
-	float: left;
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-	gap: 20px;
-	padding: 20px;
+    width: 70%;  /* Set fixed width */
+    height: 500px; /* Set fixed height */
+    overflow-y: auto; /* Enable vertical scrolling */
+    display: grid;
+	grid-template-columns: repeat(2, 1fr); /* Two columns for grid layout */
+	
+	scrollbar-width: thin;
+    gap: 20px;
+    padding: 20px;
 }
 
 .game-card {
-	background-color: #ffffff;
-	border-radius: 10px;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-	overflow: hidden;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding: 10px;
-	text-align: center;
+	width: 80%;
+    background: linear-gradient(#FFFFFF,#d8d8d8);
+	border-top-left-radius: 80%;
+	border-bottom-left-radius: 80% ;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    display: flex;
+	flex-direction: row;
+    align-items: center;
 }
 
 .game-image {
-	width: 100%;
-	height: auto;
-	border-radius: 8px;
+    width: 120px;
+    height: 200px;
+    
 }
 
 .game-info {
-	padding: 10px;
+    padding: 10px;
+    text-align: left;
 }
 
 .game-title {
-	font-family: 'titre';
-	font-size: 20px;
+    font-family: 'titre';
+    font-size: 18px;
 	color: #092435;
+	
 }
 
 .game-description {
-	font-size: 14px;
-	color: #555;
-	margin: 10px 0;
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0;
 }
 
 .game-price {
-	font-size: 18px;
-	font-weight: bold;
-	color: #333;
+    font-family: 'titre';
+    font-size: 16px;
+    font-weight: bold;
+    color: #4494cb;
+    margin: 5px 0;
 }
 
-.game-button {
-	font-family: 'button';
-	font-size: 18px;
-	background-color: #4494cb;
-	color: #fff;
-	border: none;
-	padding: 10px 20px;
-	border-radius: 5px;
-	cursor: pointer;
+
+
+.panier {
+    width: 15%;
+    height: 100px; /* Adjust height if necessary */
+    float: left;
+    background: linear-gradient(#FFFFFF, #d8d8d8);
+    border: 2px solid #092435; /* Border to match the example */
+	display: flex;
+	flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 20px; /* Add margin for spacing */
+}
+.head-panier{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	border-bottom: 3px solid #d8d8d8;
+}
+.panier-icon {
+    width: 40px; /* Adjust the size of the icon */
+    height: auto;
+    margin-right: 10px;
 }
 
-.game-button:hover {
-	background-color: #367fa3;
+.panier-text {
+     /* Use the same font as for titles */
+    font-size: 18px;
+    color: #092435;
 }
-.panier{
-	width:20%;
-	height: 500px;
-	
-	float:left;
-}
-@media screen and (max-width: 900px){
-	.titre, .authentification, .contenu, .panier{
-		width:100%;
-	}
+/* .scroller{
+
+} */
+@media screen and (max-width: 900px) {
+    .titre, .authentification, .contenu, .panier {
+        width: 100%;
+    }
 }

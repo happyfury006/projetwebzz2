@@ -27,17 +27,22 @@
 				<input type="password" name="mail">
 			</div>
 			<div class="buttons">
-				<button>S'inscrire</button>
-				<button>Connexion</button>
+				<button class="boutton">S'inscrire</button>
+				<button class="boutton">Connexion</button>
 			</div>
 			
 			
 			</div>
+			<div class="liste">
+
+			
 			<div class="contenu">
     <?php
-    $db = mysqli_connect('localhost', 'jeux-videos', 'IsImA_ZZ2/%', 'jeux-videos', 3307)
-    or die('Erreur SQL'.mysqli_error($db));
-    $db->query('SET NAMES UTF8');
+	$db = mysqli_connect('localhost', 'jeux-videos', 'IsImA_ZZ2/%', 'jeux-videos', 3307);
+	if (!$db) {
+		die('Erreur SQL: ' . mysqli_connect_error());
+	}
+	$db->query('SET NAMES UTF8');
     $cate = $_GET['famille'];
     $sql = "SELECT libelle, detail, prix_ttc, image FROM article WHERE id_categorie=$cate";
     $res = $db->query($sql);
@@ -57,6 +62,7 @@
     }
     mysqli_close($db);
     ?>
+</div>
 </div>
 			<div class="panier">
 			PANIER
