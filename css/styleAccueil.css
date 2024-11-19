@@ -35,32 +35,41 @@ body{
 }
 
 .authentification {
-    width: 20%;
+  width: 20%;
 	display: flex;
 	float: left;
-    flex-direction: column;
-    justify-content: flex-end;
+  flex-direction: column;
+  justify-content: center;
+	align-items: center;
+	padding: 10px;
 }
 
 .connexion {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
-    background-color: #4494cb;
-    margin: 10px;
-    padding: 10px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: flex-end;
+	background-color: #4494cb;
+	margin: 10px;
+	padding: 10px;
+}
+.connexion input{
+	width: 95%;
 }
 
 .buttons {
     width: 90%;
     display: flex;
-    justify-content: flex-end;
+		flex: row;
+		flex-wrap: wrap;
+    justify-content: center;
     padding-right: 20px;
     justify-content: space-between;
+		
 }
 
-.boutton
+.bouton
 {
 	font-family: 'button';
 	background-color:#fff;
@@ -91,9 +100,8 @@ color:#fff;
     height: 500px; /* Set fixed height */
     overflow-y: auto; /* Enable vertical scrolling */
     display: grid;
-	grid-template-columns: repeat(2, 1fr); /* Two columns for grid layout */
-	
-	scrollbar-width: thin;
+		grid-template-columns: repeat(2, 1fr); /* Two columns for grid layout */
+		scrollbar-width: thin;
     gap: 20px;
     padding: 20px;
 }
@@ -145,31 +153,11 @@ color:#fff;
 
 
 
-.panier {
-    width: 15%;
-    height: 100px; /* Adjust height if necessary */
-    float: left;
-    background: linear-gradient(#FFFFFF, #d8d8d8);
-    border: 2px solid #092435; /* Border to match the example */
-	display: flex;
-	flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    margin: 20px; /* Add margin for spacing */
-}
-.head-panier{
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: flex-start;
-	border-bottom: 3px solid #d8d8d8;
-}
 
 
 .categorie {
 	display: flex;
-	width: 350%;
+	width: 100%;
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: space-evenly;
@@ -195,7 +183,6 @@ color:#fff;
 	border: 2px solid black;
 	max-width: 100%;
 }
-
 .nomcate {
 	display: flex;
 	font-weight: bold;
@@ -203,25 +190,64 @@ color:#fff;
 	justify-content: center;
 	margin-top: 10px;
 	margin-bottom: 20px;
+}	
+.panier {
+	width: 16%;
+	height: auto; /* Adjust height if necessary */
+	display: flex;
+	float: left;
+	flex-direction: column;
+	background: linear-gradient(#FFFFFF, #d8d8d8);
+	border: 2px solid #092435; /* Border to match the example */
+	align-items: center;
+	justify-content: center;
+	padding: 10px;
+	margin: 20px; /* Add margin for spacing */
 }
-		
-		
-.panier{
-	width:20%;
-	height: 500px;
-	
-	float:right;
+.panier-header{
+	width: 100%;
+	font-size: 18px;
+  color: #092435;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	border-bottom: solid 2px #d8d8d8;
+}
 .panier-icon {
     width: 40px; /* Adjust the size of the icon */
     height: auto;
     margin-right: 10px;
 }
 
-.panier-text {
-     /* Use the same font as for titles */
-    font-size: 18px;
-    color: #092435;
+.panier-items {
+	width: 100%;
+		/* Use the same font as for titles */
+	min-height: 50px;
+	display: flex;
+	float: left;
+	flex-direction: column;
+	justify-content: center;
 }
+.panier-item{
+	width: 100%;
+}
+.panier-item-title{
+	text-align: start;
+}
+.panier-item-prix{
+	text-align: end;
+}
+.panier-total{
+	width: 100%;
+	text-align: end;
+	justify-content: center;
+	border-top: solid 2px #d8d8d8;
+}
+.panier-total-prix{
+	text-align:end;
+}
+
 /* .scroller{
 
 } */
