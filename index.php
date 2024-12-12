@@ -53,7 +53,7 @@
                 <p class="game-description"><?php echo htmlspecialchars($data['detail']); ?></p>
                 <p class="game-price"><?php echo htmlspecialchars($data['prix_ttc']); ?> €</p>
                 <!-- Formulaire pour ajouter un article au panier -->
-                <form action="ajouter_panier.php" method="POST">
+                <form action="ajouter-panier.php" method="POST">
                     <input type="hidden" name="id_article" value="<?php echo $data['id']; ?>">
                     <input type="hidden" name="quantite" value="1"> <!-- Quantité fixe à 1 -->
                     <button type="submit" class="bouton">Commander</button>
@@ -78,7 +78,7 @@
 								case 1:
 									?>
 									<div class="unecate">
-										<a href="http://projetwebzz2/index.php?famille=1">
+										<a href="http://projetwebzz2local/index.php?famille=1">
 											<img class="imgcate" src="<?php echo 'images_categorie/'.htmlspecialchars($data1['image']); ?>" alt="Image de  <?php echo htmlspecialchars($data1['libelle']); ?>">
 										</a>
 										<div class="nomcate">
@@ -92,7 +92,7 @@
 								case 2:
 									?>
 									<div class="unecate">
-										<a href="http://projetwebzz2/index.php?famille=2">
+										<a href="http://projetwebzz2local/index.php?famille=2">
 											<img class="imgcate" src="<?php echo 'images_categorie/'.htmlspecialchars($data1['image']); ?>" alt="Image de  <?php echo htmlspecialchars($data1['libelle']); ?>">
 										</a>
 									<div class="nomcate">
@@ -106,12 +106,12 @@
 								case 3:
 									?>
 									<div class="unecate">
-										<a href="http://projetwebzz2/index.php?famille=3">
+										<a href="http://projetwebzz2local/index.php?famille=3">
 											<img class="imgcate" src="<?php echo 'images_categorie/'.htmlspecialchars($data1['image']); ?>" alt="Image de  <?php echo htmlspecialchars($data1['libelle']); ?>">
 										</a>
 									<div class="nomcate">
 										<?php
-											echo 'Jeux de '.$data1['libelle'];
+											echo 'Jeux d '.$data1['libelle'];
 										?>
 										</div>
 									</div>
@@ -120,7 +120,7 @@
 								case 4:
 									?>
 									<div class="unecate">
-										<a href="http://projetwebzz2/index.php?famille=4">
+										<a href="http://projetwebzz2local/index.php?famille=4">
 											<img class="imgcate" src="<?php echo 'images_categorie/'.htmlspecialchars($data1['image']); ?>" alt="Image de  <?php echo htmlspecialchars($data1['libelle']); ?>">
 										</a>
 									<div class="nomcate">
@@ -134,7 +134,7 @@
 								case 5:
 									?>
 									<div class="unecate">
-										<a href="http://projetwebzz2/index.php?famille=5">
+										<a href="http://projetwebzz2local/index.php?famille=5">
 											<img class="imgcate" src="<?php echo 'images_categorie/'.htmlspecialchars($data1['image']); ?>" alt="Image de  <?php echo htmlspecialchars($data1['libelle']); ?>">
 										</a>
 									<div class="nomcate">
@@ -198,7 +198,7 @@
 				 <?php
 				 }
 				 ?>
-				<button class="bouton" onclick="window.location.href='vider_panier.php'">Vider le Panier</button>
+				<button class="bouton" onclick="window.location.href='vider-panier.php'">Vider le Panier</button>
 			</div>
 			</div>
 			<?php
