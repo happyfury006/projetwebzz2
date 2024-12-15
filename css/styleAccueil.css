@@ -36,6 +36,7 @@ body{
 
 .authentification {
   width: 20%;
+  min-width: 180px;
 	display: flex;
 	float: left;
   flex-direction: column;
@@ -90,13 +91,13 @@ border-bottom:2px solid #fff;
 color:#fff;
 }
 .liste{
-	width: 80%;
+	width: 70%;
 	justify-content: center;
 	display: flex;
 	float: left;
 }
 .contenu {
-    width: 70%;  /* Set fixed width */
+    width: 800px;  /* Set fixed width */
     height: 500px; /* Set fixed height */
     overflow-y: auto; /* Enable vertical scrolling */
     display: grid;
@@ -104,10 +105,12 @@ color:#fff;
 		scrollbar-width: thin;
     gap: 20px;
     padding: 20px;
+	
 }
 
 .game-card {
-	width: 80%;
+	
+	width: 300px;
     background: linear-gradient(#FFFFFF,#d8d8d8);
 	border-top-left-radius: 80%;
 	border-bottom-left-radius: 80% ;
@@ -194,7 +197,8 @@ color:#fff;
 	margin-bottom: 20px;
 }	
 .panier {
-	width: 16%;
+	width: 25%;
+	min-width: 226px;
 	height: auto; /* Adjust height if necessary */
 	display: flex;
 	float: left;
@@ -242,7 +246,7 @@ color:#fff;
 }
 .panier-total{
 	width: 100%;
-	text-align: end;
+	text-align: center;
 	justify-content: center;
 	border-top: solid 2px #d8d8d8;
 }
@@ -250,11 +254,111 @@ color:#fff;
 	text-align:end;
 }
 
-/* .scroller{
 
-} */
-@media screen and (max-width: 900px) {
-    .titre, .authentification, .contenu, .panier {
-        width: 100%;
+
+
+
+@media screen and (max-width: 720px){
+
+	.titre, .authentification, .categorie{
+		width: 100%;
+		
+	}
+
+	.contenu{
+		display: flex;
+		flex-direction: column;
+		overflow-x: hidden;
+		justify-content: center;
+		align-items: center;
+		width: 80%;
+	}
+
+	.liste{
+		width: 100%;
+	} 
+
+	
+
+
+	.categorie{
+		 /* Prendre toute la largeur de l'écran */
+		
+		margin-right: 0; /* Enlever les marges gauche et droite */
+		margin-left: 15px;
+		
+		
+	}
+
+	.unecate {
+        flex: 1 1 30%; /* Sur les petits écrans, chaque élément prend 45% de la largeur */
+        max-width: 30%;
     }
+	
+
+	.connexion{
+		justify-content: center;
+		align-items: center;
+	}
+
+	.connexion input{
+		width: 50%;
+	}
+	
+	.buttons{
+		justify-content: flex-end;
+		padding-right: 0;
+		margin-right: 0;
+		gap:10px;
+	}
+
+	.panier{
+		width: 97%;
+		margin: 10px;
+	}
+
+
+	
 }
+
+@media screen and (max-width: 935px) and (min-width: 720px){
+	.panier{
+		width: 97%;
+		margin: 10px;
+	}
+
+	.game-card{
+		
+		margin-right: 0px;
+	}
+	
+	.liste{
+		width: 100%;
+	} 
+
+	.contenu{
+		width: 95%;
+	}
+	
+	.titre{
+		width: 73%;
+	}
+
+	
+}
+
+@media screen and (max-width: 1024px) and (min-width: 935px){
+	.panier{
+		
+		margin-left: 5px;
+	}
+
+	.game-card{
+		
+		margin-right: 0px;
+	}
+
+	
+}
+
+
