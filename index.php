@@ -26,6 +26,16 @@
 				<label for="mot_de_passe">mot de passe</label>
 				<input type="password" name="mail">
 			</div>
+			<div class="inscription" type="hidden">
+				<label for="nom">nom</label>
+				<input type="text" name="nom">
+				<label for="prenom">prenom</label>
+				<input type="text" name="prenom">
+				<label for="adresse_mail">adresse mail</label>
+				<input type="mail" name="mail">
+				<label for="mot_de_passe">mot de passe</label>
+				<input type="password" name="mail">
+			</div>
 			<div class="buttons">
 				<button class="bouton">S'inscrire</button>
 				<button class="bouton">Connexion</button>
